@@ -1,9 +1,12 @@
 #quiz game
 correct = 0
+guesses = 0
 
-print("Welcome to my quiz. This will test your knowledge on European capital cities. \n")
+print(
+    "Welcome to my quiz. This will test your knowledge on European capital cities. \n"
+)
 
-answer = input("Do you want to play? \n")
+answer = input("Do you want to play? \n\n")
 if answer.lower() == "yes":
     print("\nGreat. Let's play!")
 else:
@@ -11,56 +14,56 @@ else:
     quit()
 print("\n_______________________________________")
 
-
 answer = input("\n\nWhat is the capital city of the France? \n")
 if answer.lower() == "paris":
     correct += 1
-    print("\nCorrect. " + str(correct) + "/1")
+    guesses += 1
+    print("\nCorrect. " + str(correct) + "/" + str(guesses))
 else:
-    print("\Incorrect. " + str(correct) + "/1")
-print(str(correct) +  "/1")
+    guesses += 1
+    print("\nIncorrect. " + str(correct) + "/" + str(guesses))
 print("\n_______________________________________")
-
 
 answer = input("\n\nWhat is the capital city of Germany? \n")
 if answer.lower() == "berlin":
-    print("\nCorrect")
+    guesses += 1
     correct += 1
+    print("\nCorrect. " + str(correct) + "/" + str(guesses))
 else:
-    print("\nIncorrect!")
-print(str(correct) + "/2")
+    guesses += 1
+    print("\nIncorrect. " + str(correct) + "/" + str(guesses))
 print("\n_______________________________________")
-
 
 answer = input("\n\nWhat is the capital city of Poland? \n")
 if answer.lower() == "warsaw":
-    print("\nCorrect")
+    guesses += 1
     correct += 1
+    print("\nCorrect. " + str(correct) + "/" + str(guesses))
 else:
-    print("\nIncorrect!")
-print(str(correct) + "/3")
-print("\n_______________________________________")
+    guesses += 1
+    print("\nIncorrect. " + str(correct) + "/" + str(guesses))
 
+print("\n_______________________________________")
 
 answer = input("\n\nWhat is the capital city of Austria? \n")
 if answer.lower() == "vienna":
-    print("\nCorrect")
+    guesses += 1
     correct += 1
+    print("\nCorrect. " + str(correct) + "/" + str(guesses))
 else:
-    print("\nIncorrect!")
-print(str(correct) + "/4")
+    guesses += 1
+    print("\nIncorrect. " + str(correct) + "/" + str(guesses))
 print("\n_______________________________________")
-
 
 answer = input("\n\nWhat is the capital city of Norway? \n")
 if answer.lower() == "oslo":
-    print("\nCorrect")
+    guesses += 1
     correct += 1
+    print("\nCorrect. " + str(correct) + "/" + str(guesses))
 else:
-    print("\nIncorrect!")
-print(str(correct) + "/5")
+    guesses += 1
+    print("\nIncorrect. " + str(correct) + "/" + str(guesses))
 print("\n_______________________________________")
-
 
 calc = correct / 5 * 100
 print("_______________________________________\n")
